@@ -49,7 +49,7 @@ var moviePosts = function(movie) {
     var urlAPI =
       "http://www.omdbapi.com/?t=" + movie + "&y=&plot=full&tomatoes=true&apikey=trilogy";
   
-    request(url, function(error, response, body) {
+    request(urlAPI, function(error, response, body) {
       if (!error && response.statusCode === 200) {
         var jsonData = JSON.parse(body);
   
